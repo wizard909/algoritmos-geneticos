@@ -35,19 +35,6 @@ Los algoritmos genéticos (AG) se aplican en diversas áreas específicas debido
 
 6. **Robótica y control**: Empleados en el diseño y optimización de controladores para robots, la planificación de movimientos, la navegación y la coordinación de múltiples agentes .
 
-### Ventajas de los Algoritmos Genéticos:
-- **Exploración eficiente del espacio de búsqueda**: Capacidad para explorar grandes espacios de soluciones y encontrar soluciones óptimas o subóptimas .
-- **Adaptabilidad**: Pueden adaptarse a problemas complejos con múltiples variables y restricciones.
-- **Tolerancia al ruido**: Son robustos frente a datos ruidosos o inciertos .
-- **Optimización multiobjetivo**: Pueden manejar múltiples objetivos simultáneamente.
-
-### Desventajas de los Algoritmos Genéticos:
-- **Necesidad de una representación adecuada**: Requieren una representación adecuada del problema para ser efectivos .
-- **Convergencia prematura**: Existe el riesgo de converger prematuramente hacia una solución subóptima.
-- **Evaluaciones costosas**: Necesitan un número considerable de evaluaciones de la función objetivo, lo que puede ser computacionalmente costoso 
-- **Sensibilidad a parámetros**: Su rendimiento puede ser muy sensible a la elección de parámetros y operadores genéticos 
-- **No garantizan una solución óptima**: No siempre aseguran encontrar la solución óptima en todos los casos.
-
 Los algoritmos genéticos son herramientas poderosas para resolver una amplia gama de problemas de optimización, pero su efectividad depende en gran medida de cómo se configuren y apliquen en cada contexto específico.
 
 
