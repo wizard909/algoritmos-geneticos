@@ -52,37 +52,10 @@ Este predicado llama al proceso de selección para encontrar el mejor escondite 
 ```
 Esta consulta inicia el proceso generando la población inicial y luego encontrando la mejor estrategia.
 
-### Comparación con una Estructura Básica
-
-Una estructura básica para encontrar el número más grande en una lista podría ser algo como esto:
-
-```prolog
-maximo([X], X). % Caso base: si solo hay un elemento, ese es el máximo
-maximo([X,Y|Resto], Max) :-
-    (   X >= Y
-    ->  maximo([X|Resto], Max)
-    ;   maximo([Y|Resto], Max)
-    ).
-```
-Este predicado encuentra el número más grande en una lista de números.
-
-### Diferencias y Beneficios
-
-1. **Generalización**:
-   - La estructura básica compara números directamente.
-   - El código del algoritmo genético compara "aptitudes" asociadas a estrategias de escondite.
-
-2. **Aplicabilidad**:
-   - La estructura básica es específica para encontrar el máximo en una lista de números.
-   - El código del algoritmo genético es más general y puede adaptarse para evaluar cualquier tipo de estrategia basada en diferentes criterios de aptitud.
-
-3. **Escalabilidad**:
-   - La estructura básica no incluye mecanismos para evolución o mejora continua.
-   - La lógica del algoritmo genético puede escalarse fácilmente para incluir mecanismos de reproducción, mutación y selección natural, permitiendo la evolución de estrategias más complejas.
 
 ### Escalabilidad en Algoritmos Genéticos
 
-Para escalar este enfoque en un algoritmo genético completo, puedes incluir los siguientes componentes adicionales:
+Para escalar este enfoque en un algoritmo genético completo, se pueden incluir los siguientes componentes adicionales:
 
 1. **Reproducción**:
    - Combinar dos estrategias para crear una nueva estrategia.
@@ -119,8 +92,6 @@ Para escalar este enfoque en un algoritmo genético completo, puedes incluir los
      ```
 
 ### Ejemplo de Escalabilidad
-
-Aquí tienes un ejemplo básico de cómo podrías escalar este enfoque:
 
 ```prolog
 % Reproducción: Combinar estrategias para crear nuevas (simplificado)
