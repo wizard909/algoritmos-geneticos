@@ -151,13 +151,15 @@ En el ámbito industrial, los AG se aplican en la optimización de diseños y pr
 **Herramientas Interactivas y Recursos**
   
 **Simuladores en Línea:**
--GA Playground
--Genetic Algorithm Visualizer
+-GA Playground.
+-Genetic Algorithm Visualizer •	https://www.geneticalgorithms.online/.
 
 **Tutoriales y Ejemplos Prácticos:**
--GeeksforGeeks
--Towards Data Science
+-GeeksforGeeks.•	https://www.geeksforgeeks.org/genetic-algorithms/.
+-Towards Data Science.•	https://towardsdatascience.com/from-biology-to-computing-an-introduction-to-genetic-algorithms-b39476743483.
 
 **Librerías y Frameworks:**
--DEAP (Distributed Evolutionary Algorithms in Python)
--GA for TSP on GitHub
+-DEAP (Distributed Evolutionary Algorithms in Python).https://deap.readthedocs.io/en/master/.
+-GA for TSP on GitHub.https://github.com/ezstoltz/genetic-algorithm.
+
+
