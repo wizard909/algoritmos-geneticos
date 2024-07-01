@@ -26,7 +26,7 @@ El funcionamiento general de un algoritmo genético se puede resumir en los sigu
 
 Estos elementos y pasos permiten a los algoritmos genéticos explorar eficientemente el espacio de búsqueda y adaptarse a problemas complejos con múltiples variables y restricciones, encontrando soluciones óptimas o subóptimas 
 
-[algoritmo genetico](algoritmo genetico.jpg)
+[algoritmo genetico](https://github.com/wizard909/algoritmos-geneticos/blob/main/algoritmo%20genetico.jpg)
 
 
 | Concepto                         | Descripción y Relación con Otros Conceptos                                                                                                                                                                                                                      |
