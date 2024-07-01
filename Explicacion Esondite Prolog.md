@@ -52,6 +52,7 @@ Este predicado llama al proceso de selección para encontrar el mejor escondite 
 ```
 Esta consulta inicia el proceso generando la población inicial y luego encontrando la mejor estrategia.
 
+Claro, aquí tienes el markdown arreglado:
 
 ### Escalabilidad en Algoritmos Genéticos
 
@@ -89,19 +90,24 @@ Para escalar este enfoque en un algoritmo genético completo, se pueden incluir 
      ```prolog
      evolucionar(PoblacionInicial, Generaciones, PoblacionFinal) :-
          % Lógica para iterar a través de múltiples generaciones.
-   ```
+     ```
+
 5. **Iteración**:
-% Evolución: Repetir evaluación y selección durante varias generaciones
-evolucionar(PoblacionInicial, 0, PoblacionInicial).
-evolucionar(PoblacionInicial, Generaciones, PoblacionFinal) :-
-    Generaciones > 0,
-    seleccionar_mejores(PoblacionInicial, Mejores),
-    recombinar(Mejores, _, Nuevos),
-    mutar(Nuevos, Mutados),
-    GeneracionesRestantes is Generaciones - 1,
-    evolucionar(Mutados, GeneracionesRestantes, PoblacionFinal).
-    
+   - Evolución: Repetir evaluación y selección durante varias generaciones.
+     ```prolog
+     evolucionar(PoblacionInicial, 0, PoblacionInicial).
+     evolucionar(PoblacionInicial, Generaciones, PoblacionFinal) :-
+         Generaciones > 0,
+         seleccionar_mejores(PoblacionInicial, Mejores),
+         recombinar(Mejores, _, Nuevos),
+         mutar(Nuevos, Mutados),
+         GeneracionesRestantes is Generaciones - 1,
+         evolucionar(Mutados, GeneracionesRestantes, PoblacionFinal).
+     ```
+
 6. **Consulta**:
-% Consulta para iniciar el proceso evolutivo
-%?- generar_poblacion_inicial(PoblacionInicial), evolucionar(PoblacionInicial, 10, PoblacionFinal).
-```
+   - Consulta para iniciar el proceso evolutivo.
+     ```prolog
+     %?- generar_poblacion_inicial(PoblacionInicial), evolucionar(PoblacionInicial, 10, PoblacionFinal).
+     ```
+
