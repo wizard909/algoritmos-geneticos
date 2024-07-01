@@ -13,7 +13,7 @@ La idea de los algoritmos genéticos fue introducida por primera vez en la déca
   
 ![img cromosoma](https://github.com/wizard909/algoritmos-geneticos/blob/main/estructura%20basica.png)
 
-Los elementos principales de los AG y su funcionamiento son los siguientes:
+Los elementos principales y funcionamiento:
 
 1. **Población**: Es un conjunto de posibles soluciones al problema que se desea resolver. Estas soluciones se representan mediante estructuras de datos llamadas "individuos" o "cromosomas" 
 
@@ -26,7 +26,8 @@ Los elementos principales de los AG y su funcionamiento son los siguientes:
 
 4. **Criterio de parada**: Condición que determina cuándo se debe detener el algoritmo. Puede ser un número máximo de generaciones, una solución óptima encontrada o un límite de tiempo 
 
-El funcionamiento general de un algoritmo genético se puede resumir en los siguientes pasos:
+El funcionamiento general se puede resumir en los siguientes pasos:
+
 1. **Inicialización**: Se genera una población inicial de individuos aleatorios .
 2. **Evaluación**: Se calcula la aptitud de cada individuo utilizando la función de evaluación .
 3. **Selección**: Se eligen los individuos más aptos para reproducirse .
