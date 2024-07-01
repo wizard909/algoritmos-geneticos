@@ -5,12 +5,14 @@
 
 Los algoritmos genéticos (AG) son métodos adaptativos basados en técnicas inspiradas en la evolución biológica y genética para resolver problemas de optimización. 
 Se fundamentan en el principio darwiniano de la supervivencia de los organismos más aptos, donde las soluciones más eficientes tienen más probabilidades de sobrevivir y propagarse en la población de soluciones.
+La idea de los algoritmos genéticos fue introducida por primera vez en la década de 1960 por John Holland, un pionero en el campo de la computación evolutiva. Holland, junto con sus estudiantes y colegas en la Universidad de Michigan, desarrolló formalmente este enfoque en su libro "Adaptation in Natural and Artificial Systems" publicado en 1975. Holland no solo propuso el uso de algoritmos genéticos para la optimización, sino que también estableció las bases teóricas para entender cómo estos algoritmos pueden simular el proceso de evolución natural para encontrar soluciones eficientes a problemas complejos.
 
-###Estructura básica:
-- **Cromosoma: Representación de una posible solución al problema que se está intentando resolver.
-- **Gen: Unidad de información dentro de un cromosoma que representa uno de los valores de las variables de decisión.
+### Estructura básica:
+- **Cromosoma:** Representación de una posible solución al problema que se está intentando resolver.
+- **Gen:** Unidad de información dentro de un cromosoma que representa uno de los valores de las variables de decisión.
   
 ![img cromosoma](https://github.com/wizard909/algoritmos-geneticos/blob/main/estructura%20basica.png)
+
 Los elementos principales de los AG y su funcionamiento son los siguientes:
 
 1. **Población**: Es un conjunto de posibles soluciones al problema que se desea resolver. Estas soluciones se representan mediante estructuras de datos llamadas "individuos" o "cromosomas" 
