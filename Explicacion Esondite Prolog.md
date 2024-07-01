@@ -63,9 +63,7 @@ Para escalar este enfoque en un algoritmo genético completo, se pueden incluir 
    - Ejemplo:
      ```prolog
      recombinar(Escondite1, Escondite2, NuevoEscondite) :-
-         escondite(NuevoEscondite),
-         NuevoEscondite \= Escondite1,
-         NuevoEscondite \= Escondite2.
+         % Lógica para recombinar 2 encondites a uno nuevo.
      ```
 
 2. **Mutación**:
