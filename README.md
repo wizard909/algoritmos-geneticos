@@ -1,4 +1,7 @@
 ## ALGORITMOS GENÉTICOS
+#Facundo Cichero
+#Nehuen Caamaño
+#Benjamin
 
 Los algoritmos genéticos (AG) son métodos adaptativos basados en técnicas inspiradas en la evolución biológica y genética para resolver problemas de optimización. Los elementos principales de los AG y su funcionamiento son los siguientes:
 
