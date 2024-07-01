@@ -5,6 +5,12 @@
 
 Los algoritmos genéticos (AG) son métodos adaptativos basados en técnicas inspiradas en la evolución biológica y genética para resolver problemas de optimización. 
 Se fundamentan en el principio darwiniano de la supervivencia de los organismos más aptos, donde las soluciones más eficientes tienen más probabilidades de sobrevivir y propagarse en la población de soluciones.
+
+###Estructura básica:
+- **Cromosoma: Representación de una posible solución al problema que se está intentando resolver.
+- **Gen: Unidad de información dentro de un cromosoma que representa uno de los valores de las variables de decisión.
+  
+![img cromosoma](https://github.com/wizard909/algoritmos-geneticos/blob/main/estructura%20basica.png)
 Los elementos principales de los AG y su funcionamiento son los siguientes:
 
 1. **Población**: Es un conjunto de posibles soluciones al problema que se desea resolver. Estas soluciones se representan mediante estructuras de datos llamadas "individuos" o "cromosomas" 
