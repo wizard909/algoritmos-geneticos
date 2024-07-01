@@ -89,25 +89,8 @@ Para escalar este enfoque en un algoritmo genético completo, se pueden incluir 
      ```prolog
      evolucionar(PoblacionInicial, Generaciones, PoblacionFinal) :-
          % Lógica para iterar a través de múltiples generaciones.
-     ```
-
-### Ejemplo de Escalabilidad
-
-```prolog
-% Reproducción: Combinar estrategias para crear nuevas (simplificado)
-recombinar(_, _, NuevoEscondite) :-
-    escondite(NuevoEscondite).
-
-% Mutación: Introducir variaciones en las estrategias (simplificado)
-mutar(Escondite, EsconditeMutado) :-
-    escondite(EsconditeMutado),
-    Escondite \= EsconditeMutado.
-
-% Selección Natural: Seleccionar las mejores estrategias (simplificado)
-seleccionar_mejores(Poblacion, Mejores) :-
-    % Lógica para seleccionar las mejores estrategias.
-    Poblacion = Mejores.
-
+   ```
+5. **Iteración**:
 % Evolución: Repetir evaluación y selección durante varias generaciones
 evolucionar(PoblacionInicial, 0, PoblacionInicial).
 evolucionar(PoblacionInicial, Generaciones, PoblacionFinal) :-
@@ -117,7 +100,8 @@ evolucionar(PoblacionInicial, Generaciones, PoblacionFinal) :-
     mutar(Nuevos, Mutados),
     GeneracionesRestantes is Generaciones - 1,
     evolucionar(Mutados, GeneracionesRestantes, PoblacionFinal).
-
+    
+6. **Consulta**:
 % Consulta para iniciar el proceso evolutivo
 %?- generar_poblacion_inicial(PoblacionInicial), evolucionar(PoblacionInicial, 10, PoblacionFinal).
 ```
