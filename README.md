@@ -3,7 +3,9 @@
 * **Alumnos:** Facundo Cichero, Nehuen Caamaño, Benjamin
 * **Profesor:** Pablo Pandolfo
 
-Los algoritmos genéticos (AG) son métodos adaptativos basados en técnicas inspiradas en la evolución biológica y genética para resolver problemas de optimización. Los elementos principales de los AG y su funcionamiento son los siguientes:
+Los algoritmos genéticos (AG) son métodos adaptativos basados en técnicas inspiradas en la evolución biológica y genética para resolver problemas de optimización. 
+Se fundamentan en el principio darwiniano de la supervivencia de los organismos más aptos, donde las soluciones más eficientes tienen más probabilidades de sobrevivir y propagarse en la población de soluciones.
+Los elementos principales de los AG y su funcionamiento son los siguientes:
 
 1. **Población**: Es un conjunto de posibles soluciones al problema que se desea resolver. Estas soluciones se representan mediante estructuras de datos llamadas "individuos" o "cromosomas" 
 
@@ -21,57 +23,94 @@ El funcionamiento general de un algoritmo genético se puede resumir en los sigu
 2. **Evaluación**: Se calcula la aptitud de cada individuo utilizando la función de evaluación .
 3. **Selección**: Se eligen los individuos más aptos para reproducirse .
 4. **Reproducción**: Se aplican operadores genéticos (recombinación y mutación) para crear nuevos individuos .
-5. **Reemplazo**: Se reemplaza la población actual con la nueva generación de individuos ($PAGE_3).
+5. **Reemplazo**: Se reemplaza la población actual con la nueva generación de individuos.
 6. **Convergencia**: Se repiten los pasos 2-5 hasta que se alcance un criterio de parada
 
-Estos elementos y pasos permiten a los algoritmos genéticos explorar eficientemente el espacio de búsqueda y adaptarse a problemas complejos con múltiples variables y restricciones, encontrando soluciones óptimas o subóptimas 
+### Selección
+La selección es el proceso mediante el cual se eligen los individuos más aptos para la reproducción. Los subtipos incluyen:
+1. **Selección por torneo**: Un pequeño subconjunto de la población se selecciona aleatoriamente y el individuo más apto dentro de este subconjunto se elige para la reproducción.
+2. **Selección por ruleta**: La probabilidad de seleccionar un individuo es proporcional a su aptitud relativa.
+3. **Selección por ranking**: Los individuos se ordenan según su aptitud y se asignan probabilidades de selección basadas en su posición.
+4. **Selección elitista**: Los mejores individuos son seleccionados directamente para la siguiente generación sin cambios.
+
+### Reproducción
+La reproducción incluye técnicas para generar nuevos individuos a partir de los seleccionados y puede incluir medidas de fitness. Los subtipos incluyen:
+1. **Recombinación (Cruce)**: Proceso de mezclar la información genética de dos padres para crear uno o más hijos. Esto es un ejemplo de **reproducción sexual**.
+   - **Cruce de un punto**: Se elige un punto de cruce en los cromosomas de los padres y se intercambian las porciones de los cromosomas.
+   - **Cruce de dos puntos**: Se eligen dos puntos de cruce y se intercambian las secciones internas entre los puntos.
+   - **Cruce uniforme**: Cada gen del hijo se toma aleatoriamente de uno de los dos padres.
+2. **Mutación**: Introduce variaciones aleatorias en los individuos para mantener la diversidad genética.
+   - **Mutación puntual**: Un gen en el cromosoma es alterado.
+   - **Mutación por intercambio**: Dos genes en el cromosoma son intercambiados.
+   - **Mutación por inversión**: Una subsección del cromosoma es invertida.
+3. **Reproducción asexual (Operador de copia)**: Un solo individuo se clona para crear descendencia.
+
+#### Fitness
+La aptitud (fitness) es una medida de la calidad de los individuos y es crucial en la selección y reproducción:
+1. **Fitness puro**: La aptitud directa sin ningún tipo de ajuste.
+2. **Fitness ajustado**: La aptitud modificada para tener en cuenta ciertos factores, como la diversidad de la población.
+3. **Fitness estandarizado**: La aptitud transformada para que se ajuste a una escala específica.
+4. **Fitness normalizado**: La aptitud escalada para que los valores caigan dentro de un rango común, como entre 0 y 1.
+
+### Reemplazo
+El reemplazo se refiere a cómo se introduce la nueva generación en la población, sustituyendo a los individuos previos. Los subtipos incluyen:
+1. **Reemplazo generacional**: Toda la población es reemplazada por la nueva generación.
+2. **Reemplazo por torneos**: Parte de la población es reemplazada mediante torneos entre individuos viejos y nuevos.
+3. **Reemplazo elitista**: Algunos de los mejores individuos de la generación anterior se mantienen en la nueva generación para asegurar la calidad de las soluciones.
+4. **Reemplazo de padres**: Los individuos que fueron seleccionados como padres son reemplazados en la nueva generación.
+5. **Reemplazo de individuos similares**: Los nuevos individuos reemplazan a los más similares genéticamente de la generación anterior para mantener la diversidad.
+6. **Reemplazo de peores individuos**: Los individuos menos aptos de la generación anterior son reemplazados por los nuevos individuos.
+7. **Reemplazo aleatorio**: Algunos individuos de la generación anterior son reemplazados aleatoriamente por nuevos individuos.
 
 ![algoritmo genetico](https://github.com/wizard909/algoritmos-geneticos/blob/main/algoritmo%20genetico.jpg)
 
+### Soft Computing
 
-| Concepto                         | Descripción y Relación con Otros Conceptos                                                                                                                                                                                                                      |
-|----------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Soft Computing**               | Incluye métodos computacionales flexibles como Redes Neuronales Artificiales y Lógica Difusa. **Relacionado con**: Redes Neuronales Artificiales, Lógica Difusa, Algoritmos Genéticos.                                                                           |
-| **Redes Neuronales Artificiales** | Parte del Soft Computing, son sistemas que intentan simular el comportamiento del cerebro humano para resolver problemas. **Relacionado con**: Soft Computing, Técnicas Heurísticas.                                                                            |
-| **Técnicas Heurísticas**          | Métodos utilizados para encontrar soluciones satisfactorias a problemas complejos de manera más rápida que los métodos tradicionales. **Relacionado con**: Redes Neuronales Artificiales, Problemas de Búsqueda y Optimización.                                   |
-| **Lógica Difusa**                | Técnica de Soft Computing que permite el razonamiento con información imprecisa o incierta. **Relacionado con**: Soft Computing.                                                                                                                                 |
-| **Computación Evolutiva**        | Área de la inteligencia artificial que incluye los Algoritmos Genéticos, basada en mecanismos de evolución y selección natural. **Relacionado con**: Algoritmos Genéticos, Programación Evolutiva.                                                                |
-| **Población de Soluciones Codificadas** | Conjunto de posibles soluciones a un problema, representadas como cromosomas en los AG. **Relacionado con**: Algoritmos Genéticos, Codificación Binaria.                                                                                                          |
-| **John H (Holland)**             | Científico pionero en el campo de la Computación Evolutiva y creador de los Algoritmos Genéticos. **Relacionado con**: Algoritmos Genéticos, Computación Evolutiva.                                                                                                |
-| **Programación Evolutiva**       | Técnica relacionada que también utiliza conceptos de evolución para resolver problemas de optimización. **Relacionado con**: Computación Evolutiva, Algoritmos Genéticos.                                                                                         |
-| **Optimización de Parámetros**   | Proceso en el que los AG se usan para ajustar los parámetros y mejorar el rendimiento de un sistema o modelo. **Relacionado con**: Algoritmos Genéticos.                                                                                                           |
-| **Operadores Genéticos**         | Incluyen selección, cruce y mutación, utilizados para crear nuevas generaciones de soluciones en los AG. **Relacionado con**: Algoritmos Genéticos, Selección por Ruleta/Torneo, Cruce, Mutación, Reproducción Sexual/Asexual.                                   |
-| **Fitness**                      | Medida de qué tan bien una solución codificada resuelve el problema; se usa para guiar la selección en los AG. **Relacionado con**: Algoritmos Genéticos, Selección por Ruleta/Torneo.                                                                            |
-| **Selección por Ruleta/Torneo**  | Métodos de selección en los AG donde se eligen individuos basados en su aptitud, ya sea aleatoriamente o en competición. **Relacionado con**: Operadores Genéticos, Fitness.                                                                                     |
-| **Cruce (Un punto, Dos puntos, Uniforme)** | Técnicas de recombinación que mezclan información genética de dos padres para crear descendencia en los AG. **Relacionado con**: Operadores Genéticos, Reproducción Sexual/Asexual.                                                                               |
-| **Mutación**                     | Operador genético que introduce cambios aleatorios en los cromosomas para mantener la diversidad genética en la población. **Relacionado con**: Operadores Genéticos.                                                                                             |
-| **Reproducción Sexual/Asexual**  | Métodos de creación de nuevas soluciones en los AG; la sexual implica dos padres, mientras que la asexual solo uno. **Relacionado con**: Operadores Genéticos, Cruce.                                                                                             |
+Soft Computing incluye métodos computacionales flexibles y tolerantes a la incertidumbre.
 
+### Algoritmos Genéticos (AG)
 
-Los algoritmos genéticos (AG) se aplican en diversas áreas específicas debido a su capacidad para resolver problemas complejos de optimización. Algunas de las áreas de aplicación más destacadas incluyen:
+Utilizan principios de la evolución natural para encontrar soluciones óptimas.
+
+### Relaciones y Métodos Relacionados
+
+#### Técnicas Heurísticas (Problemas de Búsqueda y Optimización)
+
+Métodos que buscan soluciones satisfactorias a problemas complejos de manera eficiente.
+
+#### Redes Neuronales Artificiales
+
+Simulan el comportamiento del cerebro humano para resolver problemas complejos, como el reconocimiento de patrones y aprendizaje automático.
+
+#### Lógica Difusa
+
+Permite el razonamiento con información imprecisa o incierta.
+
+### Áreas en Inteligencia Artificial
+
+- **Computación Evolutiva**: Incluye técnicas como los Algoritmos Genéticos y la programación evolutiva, basadas en la evolución natural.
+
+- **Procesamiento de Lenguaje Natural (PLN)**: Utiliza métodos computacionales para la comprensión y generación de lenguaje humano.
+  
+- **Sistemas Multiagentes**: Estudia sistemas compuestos por múltiples agentes autónomos que interactúan entre sí para lograr objetivos comunes.
+
+### Áreas de aplicación más destacadas
 
 1. **Ingeniería**: Utilizados para la optimización de diseños y procesos industriales, como el diseño aerodinámico de vehículos, la generación de circuitos electrónicos, y la ingeniería de materiales .
 
 2. **Logística y planificación de rutas**: Empleados en la asignación de recursos y la programación, contribuyendo a mejorar la eficiencia en la gestión de rutas y recursos .
 
-3. **Aprendizaje automático**: Los AG se utilizan para optimizar los parámetros y la estructura de modelos de aprendizaje automático, como redes neuronales, mejorando su rendimiento en tareas específicas .
+3. **Aprendizaje automático**: Los AG se utilizan para optimizar los parámetros y la estructura de modelos de aprendizaje automático, como redes neuronales, mejorando su rendimiento en tareas específicas. Formas en que se aplican:
+   
+- **Optimización de Parámetros**: Los AG pueden ajustar los hiperparámetros de modelos de aprendizaje automático, como la tasa de aprendizaje, el número de capas y neuronas en una red    neuronal, para encontrar la configuración que maximiza el rendimiento del modelo .
+
+- **Estructura de Modelos**: Además de los parámetros, los AG pueden diseñar la arquitectura óptima de una red neuronal, explorando diferentes configuraciones y seleccionando las más aptas basadas en su rendimiento .
 
 4. **Economía y finanzas**: Aplicados en la optimización de carteras de inversión, el diseño de estrategias de trading, la predicción de precios y la modelización económica .
 
 5. **Bioinformática y genómica**: Utilizados en el análisis de secuencias genéticas, la identificación de patrones en datos biológicos, la predicción de estructuras proteicas y la inferencia filogenética .
 
 6. **Robótica y control**: Empleados en el diseño y optimización de controladores para robots, la planificación de movimientos, la navegación y la coordinación de múltiples agentes .
-
-Los algoritmos genéticos son herramientas poderosas para resolver una amplia gama de problemas de optimización, pero su efectividad depende en gran medida de cómo se configuren y apliquen en cada contexto específico.
-
-
-### Algoritmos Genéticos en el Aprendizaje Automático
-
-Los algoritmos genéticos (AG) se utilizan en el aprendizaje automático principalmente para optimizar los parámetros y la estructura de modelos, como redes neuronales, con el fin de mejorar su rendimiento en tareas específicas. Aquí se detallan algunas formas en que se aplican:
-
-1. **Optimización de Parámetros**: Los AG pueden ajustar los hiperparámetros de modelos de aprendizaje automático, como la tasa de aprendizaje, el número de capas y neuronas en una red neuronal, para encontrar la configuración que maximiza el rendimiento del modelo .
-
-2. **Estructura de Modelos**: Además de los parámetros, los AG pueden diseñar la arquitectura óptima de una red neuronal, explorando diferentes configuraciones y seleccionando las más aptas basadas en su rendimiento .
 
 ### Algoritmos Genéticos en el Diseño de Productos y Procesos Industriales
 
