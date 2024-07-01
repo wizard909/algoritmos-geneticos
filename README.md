@@ -147,3 +147,17 @@ En el ámbito industrial, los AG se aplican en la optimización de diseños y pr
 - **Número Considerable de Evaluaciones**: Requieren muchas evaluaciones de la función objetivo, lo cual puede ser costoso computacionalmente .
 - **Sensibilidad a Parámetros y Operadores**: Su rendimiento puede ser muy sensible a la elección de parámetros y operadores genéticos .
 - **No Garantizan Solución Óptima**: No siempre garantizan encontrar la solución óptima en todos los casos.
+
+**Herramientas Interactivas y Recursos**
+  
+**Simuladores en Línea:**
+-GA Playground
+-Genetic Algorithm Visualizer
+
+**Tutoriales y Ejemplos Prácticos:**
+-GeeksforGeeks
+-Towards Data Science
+
+**Librerías y Frameworks:**
+-DEAP (Distributed Evolutionary Algorithms in Python)
+-GA for TSP on GitHub
